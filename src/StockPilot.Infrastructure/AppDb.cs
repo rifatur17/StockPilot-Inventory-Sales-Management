@@ -34,7 +34,8 @@ public sealed class AppDb(DbContextOptions<AppDb> options) : IdentityDbContext<A
             e.HasIndex(x => x.Sku).IsUnique(); e.HasIndex(x => new { x.CategoryId, x.Active });
             e.HasOne<Category>().WithMany().HasForeignKey(x => x.CategoryId).OnDelete(DeleteBehavior.Restrict);
             e.HasOne<Unit>().WithMany().HasForeignKey(x => x.UnitId).OnDelete(DeleteBehavior.Restrict);
-            e.Property(x => x.RowVersion).IsRowVersion();
+            if (Database.IsSqlServer()) e.Property(x => x.RowVersion).IsRowVersion();
+            else e.Property(x => x.RowVersion).ValueGeneratedNever();
             e.ToTable(t => t.HasCheckConstraint("CK_Product_Nonnegative", "[Stock] >= 0 AND [AverageCost] >= 0 AND [SellingPrice] >= 0 AND [MinimumStock] >= 0"));
         });
         b.Entity<Category>().Property(x => x.Name).HasMaxLength(100); b.Entity<Category>().HasIndex(x => x.Name).IsUnique();

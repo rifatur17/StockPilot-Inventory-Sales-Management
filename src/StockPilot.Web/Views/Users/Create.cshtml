@@ -1,0 +1,3 @@
+@model UserForm
+@{ViewData["Title"]="Create team member";}
+<form method="post" asp-action="Create" class="card card-body form-panel"><div asp-validation-summary="All" class="text-danger"></div><label asp-for="Email"></label><input asp-for="Email" class="form-control"/><label asp-for="DisplayName">Display name</label><input asp-for="DisplayName" class="form-control"/><label asp-for="Password">Temporary password (12+ characters)</label><input asp-for="Password" class="form-control" autocomplete="new-password"/><label asp-for="Role"></label><select asp-for="Role" class="form-select">@foreach(var role in Roles.All){<option>@role</option>}</select><button class="btn btn-primary mt-3">Create user</button></form>
