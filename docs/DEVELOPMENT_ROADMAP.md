@@ -1,13 +1,9 @@
-# Delivery roadmap
-Initial assessment: existing repository contained only README.md at 45f5e2d. No application, tests or migrations existed; clean main. Existing history is retained.
+# Delivery roadmap and scope
 
-1. Architecture, domain invariants, SQL mappings and initial migration.
-2. Identity, secure cookie/API boundaries, administrator bootstrap, permissions.
-3. Catalog and partner management with query pagination and archival.
-4. Serialized inventory adjustments, audit and persistent idempotency.
-5. Purchase drafts and atomic receiving with moving average costs.
-6. POS, historical invoices, stock-safe confirmation, payments and reversals.
-7. Persisted reports and responsive operational UI.
-8. SQL Server concurrency, HTTP/browser verification, security and delivery docs.
+Initial repository: one-line README, clean `main` at `45f5e2d2d68c3e29e931f8e8eb4d4d1e2e3cb9a6`. No implementation/build/tests/migrations existed. The initial commit and author are preserved. No repository was created/replaced/forked; the existing repository was cloned after authenticating as rifatur17 and verifying write access/default branch. Every new commit uses repository-local Rifatur Rahman <rifaturrahman1131@gmail.com>.
 
-Local SQL Server/Docker are unavailable. Local unit/SQLite tests do not establish SQL Server locking correctness. Native SQL tests must run in isolated CI or an explicitly configured test server. No database is automatically migrated on normal startup.
+Delivered incrementally: domain/SQL architecture; Identity/roles/security; catalog/partners; idempotent stock/audit; purchase drafts/weighted receipt costs; POS/invoices/stock-safe sales/payments/refunds/full returns; persisted reports/dashboard; isolated SQL/HTTP/concurrency CI; business currency settings; automated desktop/mobile Chromium journey; setup/security/business/API documentation. A SQL Identity migration defect discovered by native CI was corrected with a follow-up commit, not history rewriting.
+
+Verification status is tracked in VERIFICATION.md and the exact GitHub Actions run. Local SQL Server/Docker are unavailable; no SQL service or database was installed on Windows. CI uses a disposable authorized test runner/container. Unit/SQLite tests do not substitute for native SQL evidence.
+
+Future scope, deliberately not advertised as implemented: partial receiving, partial physical returns, supplier-return/purchase-reversal accounting, multiple warehouses, product images, real payment gateways, external email/password-reset delivery, currency conversion, fiscal gapless invoice numbering, inventory landed-cost/expense accounting, data export, distributed rate limiting and high-throughput partitioned stock locking. Production deployment, operator accounting acceptance, full manual accessibility/usability review, load/penetration tests and arbitrary existing-schema upgrade validation remain separate operational work.
