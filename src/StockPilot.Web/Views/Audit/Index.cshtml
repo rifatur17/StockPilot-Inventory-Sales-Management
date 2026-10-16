@@ -1,0 +1,3 @@
+@model Page<AuditDto>
+@{ViewData["Title"]="Activity & audit";}
+<div class="table-responsive"><table class="table"><thead><tr><th>UTC</th><th>Action</th><th>Entity / reference</th><th>Summary</th><th>Actor</th></tr></thead><tbody>@foreach(var x in Model.Items){<tr><td>@x.CreatedUtc.ToString("yyyy-MM-dd HH:mm")</td><td>@x.Action</td><td>@x.EntityType<br/><small>@x.EntityId</small></td><td>@x.Summary</td><td><small>@x.ActorId</small></td></tr>}</tbody></table></div><partial name="_Pager" model="new Pager(Model.Number,Model.Size,Model.Total)"/>
