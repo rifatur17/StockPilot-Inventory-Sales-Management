@@ -36,6 +36,7 @@ public sealed class Fixture : IAsyncLifetime
         Factory = new AppFactory(this);
         using var scope = Factory.Services.CreateScope(); var db = scope.ServiceProvider.GetRequiredService<AppDb>();
         if (Sql) await db.Database.MigrateAsync(); else await db.Database.EnsureCreatedAsync();
+        db.Settings.Add(new BusinessSetting{Id=BusinessSetting.SingletonId,Name="StockPilot test business",CurrencyCode="XTS"}); await db.SaveChangesAsync();
         var roles = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>(); var users = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
         foreach (var role in Roles.All)
         {
@@ -63,6 +64,7 @@ public sealed class AppFactory(Fixture fixture) : WebApplicationFactory<Program>
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
         builder.UseEnvironment("Testing");
+        builder.UseSetting("AllowedHosts","localhost;127.0.0.1;[::1]");
         builder.ConfigureServices(s =>
         {
             s.RemoveAll<DbContextOptions<AppDb>>(); s.RemoveAll<IDbContextOptionsConfiguration<AppDb>>();

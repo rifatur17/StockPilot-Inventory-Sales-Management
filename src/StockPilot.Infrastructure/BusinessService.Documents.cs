@@ -12,6 +12,7 @@ public sealed partial class BusinessService
         var actor=await Actor(actorId,ct);DocumentPermission(actor,input.Kind);
         return await Once(actor,input.Key,"draft",input,async()=>
         {
+            if(!await db.Settings.AnyAsync(x=>x.CurrencyCode.Length==3,ct))throw new BusinessException("An administrator must configure the ledger currency in Business settings before creating transactions.",409);
             if(input.Items is null || input.Items.Count<1 || input.Items.Count>100 || input.Items.Select(x=>x.ProductId).Distinct().Count()!=input.Items.Count) throw new BusinessException("Provide 1–100 distinct product lines.");
             var doc=new Document{Kind=input.Kind,ActorId=actorId,PartnerId=input.PartnerId,Discount=input.Discount,TaxRate=input.TaxRate,Reference=Text(input.Reference,"Reference",120)};
             doc.Number=(input.Kind==DocumentKind.Purchase?"PO-":"INV-")+DateTime.UtcNow.ToString("yyyyMMdd")+"-"+doc.Id.ToString("N");

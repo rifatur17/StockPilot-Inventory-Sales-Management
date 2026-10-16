@@ -6,6 +6,7 @@ namespace StockPilot.Infrastructure;
 public sealed class ApplicationUser : IdentityUser { public bool Active { get; set; } = true; public string DisplayName { get; set; } = ""; }
 public sealed class AppDb(DbContextOptions<AppDb> options) : IdentityDbContext<ApplicationUser>(options)
 {
+    public DbSet<BusinessSetting> Settings => Set<BusinessSetting>();
     public DbSet<Product> Products => Set<Product>();
     public DbSet<Category> Categories => Set<Category>();
     public DbSet<Unit> Units => Set<Unit>();
@@ -30,6 +31,7 @@ public sealed class AppDb(DbContextOptions<AppDb> options) : IdentityDbContext<A
             if (p.ClrType == typeof(string) && p.GetMaxLength() == null) p.SetMaxLength(1000);
             if (p.ClrType == typeof(string) && p.Name is "UserId" or "RoleId") p.SetMaxLength(128);
         }
+        b.Entity<BusinessSetting>(e => { e.Property(x=>x.Name).HasMaxLength(160); e.Property(x=>x.CurrencyCode).HasMaxLength(3); e.ToTable(t=>t.HasCheckConstraint("CK_Settings_Singleton", "[Id] = '11111111-1111-1111-1111-111111111111'")); });
         b.Entity<Product>(e => {
             e.Property(x => x.Sku).HasMaxLength(64); e.Property(x => x.Name).HasMaxLength(160); e.Property(x => x.Barcode).HasMaxLength(64);
             e.HasIndex(x => x.Sku).IsUnique(); e.HasIndex(x => new { x.CategoryId, x.Active });
