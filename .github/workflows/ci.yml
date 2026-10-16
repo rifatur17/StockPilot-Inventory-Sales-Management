@@ -12,6 +12,9 @@ jobs:
           global-json-file: global.json
       - run: dotnet restore StockPilot.sln --locked-mode
       - run: dotnet build StockPilot.sln -c Release --no-restore
+      - run: dotnet format whitespace StockPilot.sln --verify-no-changes --no-restore
+      - run: dotnet tool restore
+      - run: dotnet ef migrations has-pending-model-changes --project src/StockPilot.Infrastructure --startup-project src/StockPilot.Web --configuration Release --no-build -- --design-only
       - run: dotnet test StockPilot.sln -c Release --no-build --logger trx --results-directory ${{ runner.temp }}/results
       - run: node --check src/StockPilot.Web/wwwroot/assets/app.js && node --check src/StockPilot.Web/wwwroot/assets/cart.js
   sql-server:
