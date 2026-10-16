@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 namespace StockPilot.Core;
+
 public sealed record Page<T>(IReadOnlyList<T> Items, int Total, int Number, int Size);
 public sealed record ProductInput([Required, StringLength(64)] string Sku, [Required, StringLength(160)] string Name, Guid CategoryId, Guid UnitId, decimal SellingPrice, decimal MinimumStock, [StringLength(1000)] string? Description = null, [StringLength(64)] string? Barcode = null);
 public sealed record ProductDto(Guid Id, string Sku, string Name, Guid CategoryId, Guid UnitId, decimal SellingPrice, decimal? AverageCost, decimal Stock, decimal MinimumStock, bool Active, string Description, string? Barcode);

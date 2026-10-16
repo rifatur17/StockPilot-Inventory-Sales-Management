@@ -11,8 +11,10 @@ public sealed class LedgerGate(AppDb db, IHostEnvironment environment)
     public async Task<T> Run<T>(Func<Task<T>> action, CancellationToken ct = default)
     {
         var testing = db.Database.ProviderName == "Microsoft.EntityFrameworkCore.Sqlite" && environment.IsEnvironment("Testing");
-        if (!db.Database.IsSqlServer() && !testing) throw new InvalidOperationException("Only SQL Server is supported outside isolated tests.");
-        if (testing) await TestGate.WaitAsync(ct);
+        if (!db.Database.IsSqlServer() && !testing)
+            throw new InvalidOperationException("Only SQL Server is supported outside isolated tests.");
+        if (testing)
+            await TestGate.WaitAsync(ct);
         try
         {
             await using var tx = await db.Database.BeginTransactionAsync(IsolationLevel.Serializable, ct);

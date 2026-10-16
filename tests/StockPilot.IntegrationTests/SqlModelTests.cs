@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using StockPilot.Infrastructure;
 namespace StockPilot.IntegrationTests;
+
 public sealed class SqlModelTests
 {
     [Fact]
