@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 var cs = builder.Configuration.GetConnectionString("StockPilot");
 if (!builder.Environment.IsEnvironment("Testing") && string.IsNullOrWhiteSpace(cs)) throw new InvalidOperationException("Set ConnectionStrings__StockPilot using environment variables or User Secrets.");
 builder.Services.AddDbContext<AppDb>(o => o.UseSqlServer(cs ?? "Server=unconfigured.invalid;Database=not_used;Integrated Security=true"));
-builder.Services.AddScoped<LedgerGate>(); builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<BusinessService>(); builder.Services.AddScoped<LedgerGate>(); builder.Services.AddScoped<UserService>();
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(o =>
 {
     o.Password.RequiredLength = 12; o.User.RequireUniqueEmail = true;

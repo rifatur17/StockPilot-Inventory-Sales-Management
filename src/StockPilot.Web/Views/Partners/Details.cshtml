@@ -1,0 +1,3 @@
+@model PartnerDto
+@{ViewData["Title"]=Model.Name;}
+<div class="card card-body"><p>@Model.Kind · @(Model.Active?"Active":"Archived")</p><dl><dt>Contact</dt><dd>@Model.Contact</dd><dt>Address</dt><dd>@Model.Address</dd><dt>Notes</dt><dd>@Model.Notes</dd></dl><div class="toolbar"><a class="btn btn-primary" href="/Partners/Edit/@Model.Id">Edit</a><a class="btn btn-outline-primary" href="/@(Model.Kind=="Supplier"?"Purchases":"Sales")?partnerId=@Model.Id">Transaction history</a>@if(Model.Active){<form method="post" asp-action="Archive" asp-route-id="@Model.Id"><button class="btn btn-outline-danger" data-confirm="Archive this partner? History is retained.">Archive</button></form>}</div></div>
