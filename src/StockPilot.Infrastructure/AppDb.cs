@@ -28,6 +28,7 @@ public sealed class AppDb(DbContextOptions<AppDb> options) : IdentityDbContext<A
         {
             if (p.ClrType == typeof(decimal)) { p.SetPrecision(19); p.SetScale(6); }
             if (p.ClrType == typeof(string) && p.GetMaxLength() == null) p.SetMaxLength(1000);
+            if (p.ClrType == typeof(string) && p.Name is "UserId" or "RoleId") p.SetMaxLength(128);
         }
         b.Entity<Product>(e => {
             e.Property(x => x.Sku).HasMaxLength(64); e.Property(x => x.Name).HasMaxLength(160); e.Property(x => x.Barcode).HasMaxLength(64);
