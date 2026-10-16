@@ -7,6 +7,7 @@ public sealed partial class BusinessService
     public Task<ReportDto> Report(string actorId, DateTime? from = null, DateTime? to = null, CancellationToken ct = default) => gate.Run(async () =>
     {
         (await Actor(actorId, ct)).Demand(Roles.Manager);
+        UtcDates.Validate(from ?? DateTime.UtcNow.Date.AddDays(-29), to ?? DateTime.UtcNow.Date);
         var start = DateTime.SpecifyKind((from ?? DateTime.UtcNow.Date.AddDays(-29)).Date, DateTimeKind.Utc);
         var end = DateTime.SpecifyKind((to ?? DateTime.UtcNow.Date).Date.AddDays(1), DateTimeKind.Utc);
         if (end <= start || (end - start).TotalDays > 366)

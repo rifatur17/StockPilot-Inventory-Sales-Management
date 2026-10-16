@@ -68,6 +68,7 @@ public sealed partial class BusinessService
     {
         var a = await Actor(actorId, ct);
         DocumentPermission(a, kind);
+        UtcDates.Validate(from, to);
         var pg = Paging(page, size);
         var q = db.Documents.AsNoTracking().Where(x => x.Kind == kind);
         if (kind == DocumentKind.Sale && !a.Supervises)
@@ -79,7 +80,7 @@ public sealed partial class BusinessService
         if (state.HasValue)
             q = q.Where(x => x.State == state);
         if (from.HasValue)
-            q = q.Where(x => x.CreatedUtc >= from.Value);
+            q = q.Where(x => x.CreatedUtc >= from.Value.Date);
         if (to.HasValue)
             q = q.Where(x => x.CreatedUtc < to.Value.Date.AddDays(1));
         var total = await q.CountAsync(ct);

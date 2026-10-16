@@ -10,6 +10,13 @@ namespace StockPilot.IntegrationTests;
 public sealed class HttpJourneyTests(Fixture f)
 {
     [Fact]
+    public async Task InvalidDateFiltersReturnValidationErrorsInsteadOfServerErrors()
+    {
+        using var client = await f.Login(Roles.Admin);
+        foreach (var path in new[] { "/api/v1/reports?to=9999-12-31", "/api/v1/sales?from=2026-02-02&to=2026-02-01", "/api/v1/purchases?to=9999-12-31" })
+            Assert.Equal(HttpStatusCode.BadRequest, (await client.GetAsync(path)).StatusCode);
+    }
+    [Fact]
     public async Task ApiPurchaseSalePaymentAndRenderedPagesShareBusinessRules()
     {
         using var scope = f.Factory.Services.CreateScope();
