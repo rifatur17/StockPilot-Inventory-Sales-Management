@@ -7,6 +7,7 @@ public sealed class MoneyTests
     [Theory] [InlineData(-1)] [InlineData(1000000000)] [InlineData(1.001)] public void InvalidPricesFail(decimal n) => Assert.Throws<BusinessException>(() => Money.Amount(n, "Price"));
     [Fact] public void DiscountCannotExceedSubtotal() => Assert.Throws<BusinessException>(() => Money.Totals([1], 2, 0));
     [Theory] [InlineData(-1)] [InlineData(101)] public void InvalidTaxFails(decimal rate) => Assert.Throws<BusinessException>(() => Money.Totals([1], 0, rate));
+    [Fact] public void ZeroValueInvoiceIsPaidWithoutCreatingAPayment() => Assert.Equal("Paid", Money.PaymentState(0,0,0,false));
     [Fact] public void WeightedAverageUsesExistingAndReceivedStock() => Assert.Equal(4m, Money.Average(10, 2, 10, 6));
     [Fact] public void SaleStaffCannotAdjustInventory() => Assert.Throws<BusinessException>(() => new Actor("a", [Roles.Sales]).Demand(Roles.Inventory));
     [Fact] public void AdminCanManageEverything() => new Actor("a", [Roles.Admin]).Demand(Roles.Manager);

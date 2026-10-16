@@ -30,5 +30,5 @@ public static class Money
     public static decimal Average(decimal stock, decimal cost, decimal received, decimal unitCost)
         => decimal.Round((stock * cost + received * unitCost) / (stock + received), 6, MidpointRounding.AwayFromZero);
     public static string PaymentState(decimal total, decimal paid, decimal refunded, bool reversed)
-        => reversed ? (paid - refunded > 0 ? "RefundDue" : "Reversed") : refunded > 0 ? "Refunded" : paid == 0 ? "Unpaid" : paid < total ? "PartiallyPaid" : "Paid";
+        => reversed ? (paid - refunded > 0 ? "RefundDue" : "Reversed") : refunded > 0 ? "Refunded" : total == 0 ? "Paid" : paid == 0 ? "Unpaid" : paid < total ? "PartiallyPaid" : "Paid";
 }
