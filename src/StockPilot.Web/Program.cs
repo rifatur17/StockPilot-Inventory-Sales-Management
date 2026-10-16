@@ -9,6 +9,8 @@ using Microsoft.EntityFrameworkCore;
 using StockPilot.Core;
 using StockPilot.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
+// Test hosts must resolve build-time compressed assets, as Development already does.
+if (builder.Environment.IsEnvironment("Testing")) builder.WebHost.UseStaticWebAssets();
 var cs = builder.Configuration.GetConnectionString("StockPilot");
 if (!builder.Environment.IsEnvironment("Testing") && string.IsNullOrWhiteSpace(cs)) throw new InvalidOperationException("Set ConnectionStrings__StockPilot using environment variables or User Secrets.");
 builder.Services.AddDbContext<AppDb>(o => o.UseSqlServer(cs ?? "Server=unconfigured.invalid;Database=not_used;Integrated Security=true"));

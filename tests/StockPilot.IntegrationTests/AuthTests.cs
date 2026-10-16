@@ -8,6 +8,17 @@ namespace StockPilot.IntegrationTests;
 [Collection("database")]
 public sealed class AuthTests(Fixture f)
 {
+    [Theory]
+    [InlineData("/assets/site.css","text/css")]
+    [InlineData("/assets/bootstrap.min.css","text/css")]
+    [InlineData("/assets/app.js","text/javascript")]
+    [InlineData("/assets/cart.js","text/javascript")]
+    public async Task PublicStaticAssetsHaveCorrectContentTypes(string path,string contentType)
+    {
+        using var c=f.Factory.CreateClient(new Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryClientOptions{AllowAutoRedirect=false});
+        c.DefaultRequestHeaders.AcceptEncoding.ParseAdd("gzip");
+        var response=await c.GetAsync(path);Assert.Equal(HttpStatusCode.OK,response.StatusCode);Assert.Equal(contentType,response.Content.Headers.ContentType?.MediaType);Assert.Contains("gzip",response.Content.Headers.ContentEncoding);
+    }
     [Fact] public async Task AnonymousApiGets401AndMvcRedirects()
     {
         using var c=f.Factory.CreateClient(new Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryClientOptions { AllowAutoRedirect=false });
