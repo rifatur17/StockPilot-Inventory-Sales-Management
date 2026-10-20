@@ -1,3 +1,12 @@
+<!-- BEGIN animated project showcase -->
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset=".github/showcase/still-overview-mobile.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset=".github/showcase/still-overview.svg">
+  <source media="(max-width: 600px)" srcset=".github/showcase/overview-mobile.svg">
+  <img src=".github/showcase/overview.svg" width="1200" alt="StockPilot — animated workflow illustration, not live telemetry.">
+</picture>
+<!-- END animated project showcase -->
+
 # StockPilot — Inventory & Sales Management
 
 A single-business inventory and sales application built with **ASP.NET Core 10 MVC + REST API**, **EF Core SQL Server**, **Identity**, **Bootstrap 5**, Razor and Fetch. The MVC application and API share the same authorization, pricing, stock and settlement services.
