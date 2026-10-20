@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+<title id="title">StockPilot</title>
+<desc id="desc">Original project illustration. Moving states and particles explain a workflow, not live service status or measured test results.</desc>
+<defs><linearGradient id="bg"><stop stop-color="#030705" /><stop offset="1" stop-color="#11261d" /></linearGradient><radialGradient id="aura"><stop stop-color="#28c797" stop-opacity=".22" /><stop offset="1" stop-color="#28c797" stop-opacity="0" /></radialGradient><pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#73f0ca" opacity=".12" /></pattern><clipPath id="frame"><rect x="1" y="1" width="1198" height="598" rx="12" /></clipPath></defs><g clip-path="url(#frame)"><rect width="1200" height="600" fill="url(#bg)" /><ellipse cx="983.9999999999999" cy="270.0" rx="450" ry="400" fill="url(#aura)" /><rect width="1200" height="600" fill="url(#dots)" /></g><rect x="1" y="1" width="1198" height="598" rx="12" fill="none" stroke="#2d735e" />
+<text x="28" y="42" font-family="Consolas,Courier New,monospace" font-size="14" fill="#7bf0cd" font-weight="600">FEATURED / FULL-STACK</text>
+<text x="28" y="95" font-family="Segoe UI,Arial,sans-serif" font-size="38" fill="#f0f7f3" font-weight="700">StockPilot</text>
+<text x="28" y="132" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#afdccf" font-weight="400">Inventory &amp; sales · shared .NET services</text>
+<rect x="28" y="166" width="560" height="280" rx="10" fill="#11261d" stroke="#2b715c" />
+<text x="46" y="198" font-family="Consolas,Courier New,monospace" font-size="16" fill="#99f0d6" font-weight="600">INVENTORY / WRITE LIFECYCLE</text>
+<rect x="46" y="221" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="85" y="221" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="124" y="221" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="163" y="221" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="202" y="221" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="241" y="221" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="280" y="221" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="319" y="221" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="358" y="221" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="397" y="221" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="436" y="221" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="475" y="221" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="46" y="259" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="85" y="259" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="124" y="259" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="163" y="259" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="202" y="259" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="241" y="259" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="280" y="259" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="319" y="259" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="358" y="259" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="397" y="259" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="436" y="259" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="475" y="259" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="46" y="297" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="85" y="297" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="124" y="297" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="163" y="297" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="202" y="297" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="241" y="297" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="280" y="297" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="319" y="297" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="358" y="297" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="397" y="297" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="436" y="297" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="475" y="297" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="46" y="335" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="85" y="335" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="124" y="335" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="163" y="335" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="202" y="335" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="241" y="335" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="280" y="335" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="319" y="335" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="358" y="335" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="397" y="335" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="436" y="335" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<rect x="475" y="335" width="30" height="24" rx="4" fill="#165240" stroke="#33836b">
+</rect>
+<text x="46" y="426" font-family="Consolas,Courier New,monospace" font-size="18" fill="#baf0e0" font-weight="400">receive → stock → POS → invoice</text>
+<rect x="610" y="166" width="562" height="280" rx="10" fill="#11261d" stroke="#2b715c" />
+<text x="628" y="198" font-family="Consolas,Courier New,monospace" font-size="16" fill="#99f0d6" font-weight="600">RETRY / PERSISTED OPERATION KEY</text>
+<rect x="628" y="221" width="526" height="48" rx="10" fill="#0d1d16" stroke="#2b715c" />
+<text x="642" y="251" font-family="Consolas,Courier New,monospace" font-size="15" fill="#76f0cb" font-weight="600">REQUEST</text>
+<text x="773" y="251" font-family="Consolas,Courier New,monospace" font-size="18" fill="#f0f7f3" font-weight="400">operation key</text>
+<rect x="628" y="279" width="526" height="48" rx="10" fill="#0d1d16" stroke="#2b715c" />
+<text x="642" y="309" font-family="Consolas,Courier New,monospace" font-size="15" fill="#76f0cb" font-weight="600">COORDINATE</text>
+<text x="773" y="309" font-family="Consolas,Courier New,monospace" font-size="18" fill="#f0f7f3" font-weight="400">SQL lock + rowversion</text>
+<rect x="628" y="337" width="526" height="48" rx="10" fill="#0d1d16" stroke="#2b715c" />
+<text x="642" y="367" font-family="Consolas,Courier New,monospace" font-size="15" fill="#76f0cb" font-weight="600">RETRY</text>
+<text x="773" y="367" font-family="Consolas,Courier New,monospace" font-size="18" fill="#f0f7f3" font-weight="400">look up persisted result</text>
+<path d="M1152 222V393" fill="none" stroke="#297d64" stroke-width="1.4" />
+<text x="28" y="477" font-family="Consolas,Courier New,monospace" font-size="18" fill="#b3ecdb" font-weight="400">SQL application locks  ·  rowversion</text>
+<text x="28" y="508" font-family="Consolas,Courier New,monospace" font-size="17" fill="#b3ecdb" font-weight="400">Persisted keys  ·  shared MVC / API services</text>
+<path d="M28 520H1172" fill="none" stroke="#2b715c" stroke-width="1.4" />
+<text x="28" y="553" font-family="Consolas,Courier New,monospace" font-size="16" fill="#94e0c9" font-weight="400">C#  /  ASP.NET CORE  /  EF CORE  /  SQL SERVER</text>
+<text x="28" y="582" font-family="Consolas,Courier New,monospace" font-size="12" fill="#7fb2a3" font-weight="400">PROJECT WORKFLOW / ILLUSTRATION</text>
+<defs><clipPath id="cyber-frame"><rect x="2" y="2" width="1196" height="596" rx="12" /></clipPath><linearGradient id="edge-blue"><stop stop-color="#41f0bb" /><stop offset=".5" stop-color="#24a17c" /><stop offset="1" stop-color="#7df0b2" /></linearGradient><filter id="packet-glow"><feGaussianBlur stdDeviation="5" /></filter></defs>
+<g clip-path="url(#cyber-frame)">
+<g opacity=".25" font-family="Consolas,Courier New,monospace" font-size="11" fill="#53f0c1">
+<text x="1188" y="0">01</text>
+<text x="1188" y="-21">{}</text>
+<text x="1188" y="-42">10</text>
+<text x="1188" y="-63">//</text>
+<text x="1188" y="-84">01</text>
+</g>
+<g opacity=".25" font-family="Consolas,Courier New,monospace" font-size="11" fill="#53f0c1">
+<text x="1169" y="0">01</text>
+<text x="1169" y="-21">{}</text>
+<text x="1169" y="-42">10</text>
+<text x="1169" y="-63">//</text>
+<text x="1169" y="-84">01</text>
+</g>
+<g opacity=".25" font-family="Consolas,Courier New,monospace" font-size="11" fill="#53f0c1">
+<text x="1150" y="0">01</text>
+<text x="1150" y="-21">{}</text>
+<text x="1150" y="-42">10</text>
+<text x="1150" y="-63">//</text>
+<text x="1150" y="-84">01</text>
+</g>
+<g opacity=".25" font-family="Consolas,Courier New,monospace" font-size="11" fill="#53f0c1">
+<text x="1131" y="0">01</text>
+<text x="1131" y="-21">{}</text>
+<text x="1131" y="-42">10</text>
+<text x="1131" y="-63">//</text>
+<text x="1131" y="-84">01</text>
+</g>
+<g opacity=".25" font-family="Consolas,Courier New,monospace" font-size="11" fill="#53f0c1">
+<text x="1112" y="0">01</text>
+<text x="1112" y="-21">{}</text>
+<text x="1112" y="-42">10</text>
+<text x="1112" y="-63">//</text>
+<text x="1112" y="-84">01</text>
+</g>
+<g opacity=".25" font-family="Consolas,Courier New,monospace" font-size="11" fill="#53f0c1">
+<text x="1093" y="0">01</text>
+<text x="1093" y="-21">{}</text>
+<text x="1093" y="-42">10</text>
+<text x="1093" y="-63">//</text>
+<text x="1093" y="-84">01</text>
+</g>
+</g>
+<path d="M2 38V12Q2 2 12 2H48" fill="none" stroke="url(#edge-blue)" stroke-width="2" />
+<path d="M1152 2H1188Q1198 2 1198 12V38" fill="none" stroke="url(#edge-blue)" stroke-width="2" />
+<path d="M2 562V588Q2 598 12 598H48" fill="none" stroke="url(#edge-blue)" stroke-width="2" />
+<path d="M1152 598H1188Q1198 598 1198 588V562" fill="none" stroke="url(#edge-blue)" stroke-width="2" />
+<defs><filter id="object-glow"><feGaussianBlur stdDeviation="4"/></filter></defs>
+<g transform="translate(1150 40)"><g>
+<rect x="-20" y="-15" width="40" height="30" rx="8" fill="#0a211a" stroke="#43c69c"/><text x="0" y="6" text-anchor="middle" font-family="Consolas,Courier New,monospace" font-size="17" fill="#e3fff1">&lt;/&gt;</text></g></g>
+</svg>
